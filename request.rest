@@ -1,0 +1,49 @@
+### login to get accessToken
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "username" : "iqbalalhuda"
+}
+
+### getAllBusiness
+GET http://localhost:5000/v3/business
+
+### getBusinessById with accessToken
+GET http://localhost:5000/v3/business/_LJFf9YqpYxvExTvVxb7Rw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSXFiYWwgQWxodWRhIiwiaWF0IjoxNjk4Nzc5NTIyLCJleHAiOjE2OTg3ODMxMjJ9.Cikn4xnneI_W3NPXhOsR_fOiiDGDSZTkN9YtsuFRXBA
+
+### createBusiness with accessToken
+POST http://localhost:5000/v3/business
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSXFiYWwgQWxodWRhIiwiaWF0IjoxNjk4Nzc5NTIyLCJleHAiOjE2OTg3ODMxMjJ9.Cikn4xnneI_W3NPXhOsR_fOiiDGDSZTkN9YtsuFRXBA
+
+{
+    "name": "TESTING",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Tnt4JT48wHJu1aDYzcCFQw/o.jpg",
+    "is_closed": true,
+    "review_count": "10",
+    "rating": 5,
+    "price": "$$$$$",
+    "distance": 2352.669745324919
+}
+
+### updateBusinessById with accessToken
+PUT http://localhost:5000/v3/business/_LJFf9YqpYxvExTvVxb7Rw
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSXFiYWwgQWxodWRhIiwiaWF0IjoxNjk4Nzc5NTIyLCJleHAiOjE2OTg3ODMxMjJ9.Cikn4xnneI_W3NPXhOsR_fOiiDGDSZTkN9YtsuFRXBA
+
+{
+    "name": "HAEHAHE",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Tnt4JT48wHJu1aDYzcCFQw/o.jpg",
+    "is_closed": true,
+    "review_count": "10",
+    "rating": 5,
+    "price": "$$$$$",
+    "distance": 2352.669745324919
+}
+
+### deleteBusinessById with accessToken
+DELETE http://localhost:5000/v3/business/_LJFf9YqpYxvExTvVxb7Rw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSXFiYWwgQWxodWRhIiwiaWF0IjoxNjk4Nzc5NTIyLCJleHAiOjE2OTg3ODMxMjJ9.Cikn4xnneI_W3NPXhOsR_fOiiDGDSZTkN9YtsuFRXBA
+
